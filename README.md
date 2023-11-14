@@ -1,3 +1,6 @@
+> ⛔️ **DEPRECATED** -
+A massive amount of progress since Orbicular, but there are too many changes that need to be made. A rewrite is necessary.
+
 # Tangle
 The Tangle Cryptocurrency Ecosystem
 

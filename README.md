@@ -4,33 +4,13 @@ A massive amount of progress since Orbicular, but there are too many changes tha
 # Tangle
 The Tangle Cryptocurrency Ecosystem
 
-Roadmap:
-- (Metamask app DONE, ConnectWallet on hold) ConnectWallet/Mobile App support 
-- (DONE, anyone can request a new /biz/ ad for Tangle with a pull request in the media/bizAds folder) /biz/ ads
-- (DONE) Metrics Dashboard 
-- Upgrade Swap
-    - This is a list of things to add to the final version of Tangle:
-    - Upgradable contract. Upgrades must be time-delayed and can only be done by the upgrader. Address of the Upgrader can be changed to a governance contract in the future.
-    - Fix the withdrawRewards bug. It is not critical, but severe enough to warrant an upgrade. changeRewardMax ID in argument 1 and 2 must be equal.
-    - Add tracking and analytical variables: totalRewardsWithdrawn per category, event emissions for reward withdrawals include the reward category that is being withdrawn from. Maybe find a way to lump multiple reward withdrawals so that there's only 1 event emission. In general find ways to reduce the amount of event emissions in favor of fewer but more detailed emissions.
-    - Donate function needs to emit an event.
-    - Buying/selling Tangle (having it transferred to address A) should mark A as having received Tangle.
-- Website/App updates:
-    - Updated Roadmap and Whitepaper
-    - (FIXED) Limit collected addresses to 250, some chains cannot handle 500 airdrops
-    - Don't let people collect X addresses with distribution tool if they have less than X Tangle
-    - Indicator for current LP staked vs (current LP staked + current LP unstaked) for staking slider 
-    - Add Reward Breakdown %s for % of reward points in a category
-- BSC <-> AVAX DEX-Bridge
-- All other DEX-Bridges
-- Update Meta UI and features
-    - discord Meta mint/offer/bid/buy/withdraw tx bot announcements
-    - offerTokenForSale
-    - buyToken
-    - enterBidForToken
-    - withdrawBidForToken
-    - acceptBidForToken
-    - try to pull token logo from TrustWallet repo, if it exists, Meta NFTs with valid logos should be worth a bit
-    - (?) add list of Trust Wallet verified addresses with logos to website, like cryptopunks has a list of images and if they are for sale, have bid, etc. to let people know what to buy 
-- Forutsi (Decentralized, Zero-Consensus, Flexible, No-Restrictions Prediction Market)
-- Hand out flyers
+This monorepo consists of many prior things, including web-ui frontends for various projects using various frameworks, smart contracts, media, ideas, diagrams, setup and configuration info, scripts, logs, libraries, web applications, etc.
+
+Below is a list of some of what is found in here and a brief summary:
+- 2021_09_20_frontend_archive (TNGL) - An archive of the website frontend for TNGL and Meta using the Vue framework.
+- fractal - An idea to use a distinct PoW chain as a consenus mechanism, but then take that chain and simulate the bare minimum of it using smart contracts on existing chains. Within here is also a novel de Bruijn number generator for numbers 2^N of arbitrary N, tools to start and stop a local chain for testing, and parts of a Vue frontend.
+- media - Media like ads, gifs, and images for TNGL.
+- Meta - An NFT contract that allows one to 'mint' addresses, with NFTs containing an image link hardcoded to the trustwallet github (large repository of token logs). The idea was that you could claim ownership of an 'address' (not really) and also to turn all of trustwallets many official token logos into NFTs.
+- xdex - A centralized cross-chain bridge and exchange system.
+- Tangle - A state-of-the-art, upgradeable shitcoin. contains **many** smart contracts, novel web3 library chunks, a web application, Vue components for a frontend, some media, transfer logs for most of the pre-Tangle ecosystem and scripts to obtain those logs (used for conversion), and a large amount of xdex files.
+- utils - A (probably defunct) script to automate the acquisition of /biz/ ad bid data to determine good ad bid prices.
